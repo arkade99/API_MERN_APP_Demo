@@ -8,3 +8,9 @@ export const generateToken = (userData) => {
     { expiresIn: "15m" } // token expiry
   );
 };
+
+export const verifyAuthToken = (authToken) => {
+  // const decode = jwt.verify(authToken, process.env.JWT_SECRET);
+  // console.log("decode", decode);
+  return jwt.verify(authToken, process.env.JWT_SECRET);
+};
